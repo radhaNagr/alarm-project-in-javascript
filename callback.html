@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="time"></div>
+
+<body>
+  <script>
+    //syncronus
+
+    // let a=prompt("what is your name?");
+    // let b=prompt("what is your age?");
+    // let c=prompt("what is favorite color");
+    // console.log( a+ " is " +b+ " years old and has " +c+ " favorite color :)");
+
+    //asyncronus
+
+    // console.log("start");
+    // setTimeout (function(){
+    //     console.log("hey i am good and I hope you are very well");
+    // },3000);
+    // console.log("end");
+
+    //callback
+    // setTimeout (n =>{
+    //     f = 1;
+    // for ( i = 1; i <= n; i++) {
+    //     f = f * i;
+    // }
+    // console.log("factorial is", f);
+    // },3000,5)
+
+    // let p1 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve("value 1")
+    //     }, 1000)
+    // })
+    // let p2 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve("value 2")
+    //     }, 2000)
+    // })
+    // let p3 =new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve("value 3")
+    //     }, 3000)
+    // })
+
+    // let promise_all =promise.any([ p1, p2, p3 ])
+    // promise_all.then((value) => {
+    //     console.log(value);
+    // })
+
+    // var p = () => {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             reject(new error("this is not acceptable"))
+    //         }, 3000)
+    //     })
+    // }
+
+    // let a = async () => {
+    //     try
+    //      {
+    //         let c = await p()
+    //         console.log(c);
+    //     } 
+    //     catch (error) {
+    //         console.log("error");
+    //     }
+    // }
+
+    // let p1=async()=>{
+    //     return Promise((resolve,reject)=>{
+    //         setTimeout(() => {
+    //             resolve(10)
+    //         }, 1000);
+    //     })
+    // }
+    // let p2=async()=>{
+    //     return Promise((resolve,reject)=>{
+    //         setTimeout(() => {
+    //             resolve(20)
+    //         }, 2000);
+    //     })
+    // }
+    // let p3=async()=>{
+    //     return Promise((resolve,reject)=>{
+    //         setTimeout(() => {
+    //             resolve(30)
+    //         }, 3000);
+    //     })
+    // }
+
+    // const run=async()=>{
+    //     console.time("run");
+    //     let a1=p1()
+    //     let a2=p2()
+    //     let a3=p3()
+    //     let a1a2a3=await Promise.all([a1,a2,a3])
+    //     console.log(a1a2a3);
+    //     console.timeEnd("run");
+    // }
+    // setInterval (()=>{
+    //   let d= new Date()
+    //   time.innerHTML=d
+    // })
+    // let a={
+    //   name:"radha",
+    //   language:"programming",
+    // }
+    // console.log(a);
+
+
+    // class complex {
+    //   constructor(real, imaginary) {
+    //     this.real = real
+    //     this.imaginary = imaginary
+    //   }
+
+    //   add(num){
+    //     this.real=this.real+num.real
+    //     this.imaginary=this.imaginary+num.imaginary
+    //   }
+    // }
+
+    // let a=new complex(3,6)
+    // let b=new complex(8,9)
+    // a.add(b)
+    //  console.log(`${a.real}+${a.imaginary}i`);
+
+    let a=()=>{
+       return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              resolve(84384)
+            }, 3000);
+       })
+    }
+
+
+    (async()=>{
+      let b=await a()
+      console.log(b);
+      let c=await a()
+      console.log(c);
+      let d=await a()
+      console.log(d);
+    })()
+
+  </script>
+</body>
+
+</html>
